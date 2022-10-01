@@ -119,11 +119,11 @@
                 <artifactId>pb-capricorn-base</artifactId>
                 <version>${version.capricorn-base}</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>${groupId}</groupId>-->
-<!--                <artifactId>pb</artifactId>-->
-<!--                <version>${version.capricorn-sdk}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>pb-capricorn-sdk-for-spring</artifactId>
+                <version>${version.capricorn-sdk}</version>
+            </dependency>
 
             <!--JUnit-->
             <dependency>
