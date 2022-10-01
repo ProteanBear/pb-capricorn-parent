@@ -115,14 +115,14 @@
 
             <!--SDK-->
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>xyz.proteanbear</groupId>
                 <artifactId>pb-capricorn-base</artifactId>
-                <version>${version.capricorn-base}</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>xyz.proteanbear</groupId>
                 <artifactId>pb-capricorn-sdk-for-spring</artifactId>
-                <version>${version.capricorn-sdk}</version>
+                <version>1.0.0</version>
             </dependency>
 
             <!--JUnit-->
