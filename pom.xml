@@ -18,8 +18,8 @@
 
         <version.spring-boot>2.7.4</version.spring-boot>
         <version.jackson-datetype-310>2.13.4</version.jackson-datetype-310>
-        <version.operator-base>1.0.0</version.operator-base>
-        <version.operator-sdk>1.0.0</version.operator-sdk>
+        <version.capricorn-base>1.0.0</version.capricorn-base>
+        <version.capricorn-sdk>1.0.0</version.capricorn-sdk>
         <!--        <version.validator>7.0.1.Final</version.validator>-->
         <version.servlet>4.0.1</version.servlet>
         <version.mysql-driver>8.0.30</version.mysql-driver>
@@ -115,15 +115,15 @@
 
             <!--SDK-->
             <dependency>
-                <groupId>cn.care4u</groupId>
-                <artifactId>obesity-operator-base</artifactId>
-                <version>${version.operator-base}</version>
+                <groupId>${groupId}</groupId>
+                <artifactId>pb-capricorn-base</artifactId>
+                <version>${version.capricorn-base}</version>
             </dependency>
-            <dependency>
-                <groupId>cn.care4u</groupId>
-                <artifactId>obesity-operator-sdk</artifactId>
-                <version>${version.operator-sdk}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>${groupId}</groupId>-->
+<!--                <artifactId>pb</artifactId>-->
+<!--                <version>${version.capricorn-sdk}</version>-->
+<!--            </dependency>-->
 
             <!--JUnit-->
             <dependency>
