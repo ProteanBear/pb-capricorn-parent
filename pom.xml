@@ -24,6 +24,7 @@
         <version.servlet>4.0.1</version.servlet>
         <version.mysql-driver>8.0.30</version.mysql-driver>
         <version.junit>5.9.1</version.junit>
+        <version.disruptor>3.4.4</version.disruptor>
 
         <version.maven-complier>3.10.1</version.maven-complier>
         <version.maven-springboot>2.7.4</version.maven-springboot>
@@ -91,6 +92,13 @@
                 <version>${version.servlet}</version>
             </dependency>
 
+            <!--Message Queue-->
+            <dependency>
+                <groupId>com.lmax</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${version.disruptor}</version>
+            </dependency>
+
             <!--Embedded Server-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -117,12 +125,12 @@
             <dependency>
                 <groupId>xyz.proteanbear</groupId>
                 <artifactId>pb-capricorn-base</artifactId>
-                <version>1.0.0</version>
+                <version>${version.capricorn-base}</version>
             </dependency>
             <dependency>
                 <groupId>xyz.proteanbear</groupId>
                 <artifactId>pb-capricorn-sdk-for-spring</artifactId>
-                <version>1.0.0</version>
+                <version>${version.capricorn-sdk}</version>
             </dependency>
 
             <!--JUnit-->
