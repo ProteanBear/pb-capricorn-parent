@@ -25,6 +25,7 @@
         <version.mysql-driver>8.0.30</version.mysql-driver>
         <version.junit>5.9.1</version.junit>
         <version.disruptor>3.4.4</version.disruptor>
+        <version.castle>1.70</version.castle>
 
         <version.maven-complier>3.10.1</version.maven-complier>
         <version.maven-springboot>2.7.4</version.maven-springboot>
@@ -97,6 +98,13 @@
                 <groupId>com.lmax</groupId>
                 <artifactId>disruptor</artifactId>
                 <version>${version.disruptor}</version>
+            </dependency>
+
+            <!--Encrypt-->
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcpkix-jdk15on</artifactId>
+                <version>1.70</version>
             </dependency>
 
             <!--Embedded Server-->
