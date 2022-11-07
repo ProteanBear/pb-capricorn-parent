@@ -26,6 +26,7 @@
         <version.junit>5.9.1</version.junit>
         <version.disruptor>3.4.4</version.disruptor>
         <version.castle>1.70</version.castle>
+        <version.zxing>3.5.1</version.zxing>
 
         <version.maven-complier>3.10.1</version.maven-complier>
         <version.maven-springboot>2.7.4</version.maven-springboot>
@@ -105,6 +106,18 @@
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcpkix-jdk15on</artifactId>
                 <version>1.70</version>
+            </dependency>
+
+            <!--Zxing:QRCODE\Barcode-->
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>core</artifactId>
+                <version>${version.zxing}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>javase</artifactId>
+                <version>${version.zxing}</version>
             </dependency>
 
             <!--Embedded Server-->
