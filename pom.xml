@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <version.spring-boot>2.7.4</version.spring-boot>
-        <version.jackson-datetype-310>2.13.4</version.jackson-datetype-310>
+        <version.jackson-datetype-310>2.14.1</version.jackson-datetype-310>
         <version.capricorn-base>1.0.0</version.capricorn-base>
         <version.capricorn-sdk>1.0.0</version.capricorn-sdk>
         <!--        <version.validator>7.0.1.Final</version.validator>-->
@@ -92,6 +92,13 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${version.servlet}</version>
+            </dependency>
+
+            <!--Jackson Datatype-->
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${version.jackson-datetype-310}</version>
             </dependency>
 
             <!--Message Queue-->
