@@ -6,7 +6,7 @@
 
     <groupId>xyz.proteanbear</groupId>
     <artifactId>pb-capricorn-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packaging>pom</packaging>
     <description>Capricorn综合应用技术服务平台：父级项目，用于控制全部依赖版本模块。</description>
 
@@ -18,8 +18,8 @@
 
         <version.spring-boot>2.7.4</version.spring-boot>
         <version.jackson-datetype-310>2.14.1</version.jackson-datetype-310>
-        <version.capricorn-base>1.0.0</version.capricorn-base>
-        <version.capricorn-sdk>1.0.0</version.capricorn-sdk>
+        <version.capricorn-base>1.1.0</version.capricorn-base>
+        <version.capricorn-sdk>1.1.0</version.capricorn-sdk>
         <!--        <version.validator>7.0.1.Final</version.validator>-->
         <version.servlet>4.0.1</version.servlet>
         <version.mysql-driver>8.0.30</version.mysql-driver>
