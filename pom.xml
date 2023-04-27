@@ -6,7 +6,7 @@
 
     <groupId>xyz.proteanbear</groupId>
     <artifactId>pb-capricorn-parent</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <packaging>pom</packaging>
     <description>Capricorn综合应用技术服务平台：父级项目，用于控制全部依赖版本模块。</description>
 
@@ -16,21 +16,22 @@
         <maven.compiler.cur-target>17</maven.compiler.cur-target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <version.spring-boot>2.7.4</version.spring-boot>
-        <version.jackson-datetype-310>2.14.1</version.jackson-datetype-310>
-        <version.capricorn-base>1.1.0</version.capricorn-base>
-        <version.capricorn-sdk>1.1.0</version.capricorn-sdk>
+        <version.spring-boot>3.0.6</version.spring-boot>
+        <version.jackson-datetype-310>2.15.0</version.jackson-datetype-310>
+        <version.capricorn-base>1.2.0</version.capricorn-base>
+        <version.capricorn-sdk>1.2.0</version.capricorn-sdk>
         <!--        <version.validator>7.0.1.Final</version.validator>-->
-        <version.servlet>4.0.1</version.servlet>
-        <version.mysql-driver>8.0.30</version.mysql-driver>
-        <version.junit>5.9.1</version.junit>
+        <version.servlet>6.0.0</version.servlet>
+        <version.mysql-driver>8.0.33</version.mysql-driver>
+        <version.junit>5.9.3</version.junit>
         <version.disruptor>3.4.4</version.disruptor>
         <version.castle>1.70</version.castle>
         <version.zxing>3.5.1</version.zxing>
-        <version.mybatis-plus>3.5.3</version.mybatis-plus>
+        <version.mybatis-plus>3.5.3.1</version.mybatis-plus>
+        <version.bcpkix-jdk15on>1.70</version.bcpkix-jdk15on>
 
-        <version.maven-complier>3.10.1</version.maven-complier>
-        <version.maven-springboot>2.7.4</version.maven-springboot>
+        <version.maven-complier>3.11.0</version.maven-complier>
+        <version.maven-springboot>3.0.6</version.maven-springboot>
     </properties>
 
     <repositories>
@@ -97,8 +98,8 @@
 
             <!--Servlet-->
             <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>javax.servlet-api</artifactId>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
                 <version>${version.servlet}</version>
             </dependency>
 
@@ -120,7 +121,7 @@
             <dependency>
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcpkix-jdk15on</artifactId>
-                <version>1.70</version>
+                <version>${version.bcpkix-jdk15on}</version>
             </dependency>
 
             <!--Zxing:QRCODE\Barcode-->
