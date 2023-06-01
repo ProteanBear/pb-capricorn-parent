@@ -30,6 +30,7 @@
         <version.zxing>3.5.1</version.zxing>
         <version.mybatis-plus>3.5.3.1</version.mybatis-plus>
         <version.bcpkix-jdk15on>1.70</version.bcpkix-jdk15on>
+        <version.mockwebserver>4.11.0</version.mockwebserver>
 
         <version.maven-complier>3.11.0</version.maven-complier>
         <version.maven-springboot>3.0.6</version.maven-springboot>
@@ -196,6 +197,12 @@
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
                 <version>${version.junit}</version>
+            </dependency>
+            <!--MockServer-->
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>mockwebserver</artifactId>
+                <version>${version.mockwebserver}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
