@@ -30,6 +30,7 @@
         <version.zxing>3.5.1</version.zxing>
         <version.mybatis-plus>3.5.3.1</version.mybatis-plus>
         <version.bcpkix-jdk15on>1.70</version.bcpkix-jdk15on>
+        <version.spring-cloud-stream>4.0.3</version.spring-cloud-stream>
         <version.mockwebserver>4.11.0</version.mockwebserver>
 
         <version.maven-complier>3.11.0</version.maven-complier>
@@ -151,6 +152,13 @@
                 <groupId>com.google.zxing</groupId>
                 <artifactId>javase</artifactId>
                 <version>${version.zxing}</version>
+            </dependency>
+
+            <!--Kafka-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-stream-binder-kafka-reactive</artifactId>
+                <version>${version.spring-cloud-stream}</version>
             </dependency>
 
             <!--Embedded Server-->
