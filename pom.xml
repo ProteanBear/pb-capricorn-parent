@@ -31,17 +31,30 @@
         <version.mybatis-plus>3.5.3.1</version.mybatis-plus>
         <version.bcpkix-jdk15on>1.70</version.bcpkix-jdk15on>
         <version.mockwebserver>4.11.0</version.mockwebserver>
+        <version.javacv>1.5.9</version.javacv>
+        <version.spring-mock>2.0.8</version.spring-mock>
 
         <version.maven-complier>3.11.0</version.maven-complier>
         <version.maven-springboot>3.0.6</version.maven-springboot>
     </properties>
 
     <repositories>
+<!--        <repository>-->
+<!--            <id>central</id>-->
+<!--            <name>中央仓库</name>-->
+<!--            <url>https://repo.maven.apache.org/maven2</url>-->
+<!--            <layout>default</layout>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
         <repository>
-            <id>central</id>
-            <name>中央仓库</name>
-            <url>https://repo.maven.apache.org/maven2</url>
-            <layout>default</layout>
+            <id>central-aliyun</id>
+            <name>阿里云镜像</name>
+            <url>https://maven.aliyun.com/repository/central</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -153,6 +166,13 @@
                 <version>${version.zxing}</version>
             </dependency>
 
+            <!--JavaCV-->
+            <dependency>
+                <groupId>org.bytedeco</groupId>
+                <artifactId>javacv-platform</artifactId>
+                <version>${version.javacv}</version>
+            </dependency>
+
             <!--Embedded Server-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -197,6 +217,12 @@
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
                 <version>${version.junit}</version>
+            </dependency>
+            <!--SpringMock-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-mock</artifactId>
+                <version>${version.spring-mock}</version>
             </dependency>
             <!--MockServer-->
             <dependency>
