@@ -232,6 +232,7 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-mock</artifactId>
                 <version>${version.spring-mock}</version>
+                <scope>test</scope>
             </dependency>
             <!--MockServer-->
             <dependency>
