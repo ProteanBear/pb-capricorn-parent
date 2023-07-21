@@ -32,6 +32,7 @@
         <version.bcpkix-jdk15on>1.70</version.bcpkix-jdk15on>
         <version.mockwebserver>4.11.0</version.mockwebserver>
         <version.javacv>1.5.9</version.javacv>
+        <version.pdfbox>2.0.29</version.pdfbox>
         <version.spring-mock>2.0.8</version.spring-mock>
 
         <version.maven-complier>3.11.0</version.maven-complier>
@@ -180,6 +181,13 @@
                 <groupId>org.bytedeco</groupId>
                 <artifactId>javacv-platform</artifactId>
                 <version>${version.javacv}</version>
+            </dependency>
+
+            <!--pdfbox-->
+            <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>pdfbox</artifactId>
+                <version>${version.pdfbox}</version>
             </dependency>
 
             <!--Embedded Server-->
