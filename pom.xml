@@ -19,9 +19,10 @@
         <version.spring-boot>3.1.1</version.spring-boot>
         <version.snakeyaml>2.0</version.snakeyaml>
         <version.jackson-datetype-310>2.15.2</version.jackson-datetype-310>
-        <version.capricorn-base>1.2.0</version.capricorn-base>
-        <version.capricorn-sdk>1.2.0</version.capricorn-sdk>
+        <version.capricorn-base>1.2.1</version.capricorn-base>
+        <version.capricorn-sdk>1.2.1</version.capricorn-sdk>
         <version.capricorn-seaweedfs>1.0.0_beta</version.capricorn-seaweedfs>
+        <version.capricorn-sdk-new>1.0.0_beta</version.capricorn-sdk-new>
         <version.servlet>6.0.0</version.servlet>
         <version.mysql-driver>8.0.33</version.mysql-driver>
         <version.junit>5.9.3</version.junit>
