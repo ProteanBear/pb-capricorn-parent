@@ -229,6 +229,11 @@
                 <artifactId>pb-capricorn-seaweedfs-spring-boot-starter</artifactId>
                 <version>${version.capricorn-seaweedfs}</version>
             </dependency>
+            <dependency>
+                <groupId>xyz.proteanbear</groupId>
+                <artifactId>pb-capricorn-spring-boot-starter</artifactId>
+                <version>${version.capricorn-sdk-new}</version>
+            </dependency>
 
             <!--JUnit-->
             <dependency>
