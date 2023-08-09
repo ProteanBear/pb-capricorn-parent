@@ -6,7 +6,7 @@
 
     <groupId>xyz.proteanbear</groupId>
     <artifactId>pb-capricorn-parent</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <packaging>pom</packaging>
     <description>Capricorn综合应用技术服务平台：父级项目，用于控制全部依赖版本模块。</description>
 
@@ -16,33 +16,47 @@
         <maven.compiler.cur-target>17</maven.compiler.cur-target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <version.spring-boot>3.0.6</version.spring-boot>
-        <version.jackson-datetype-310>2.15.0</version.jackson-datetype-310>
-        <version.capricorn-base>1.2.0</version.capricorn-base>
-        <version.capricorn-sdk>1.2.0</version.capricorn-sdk>
-        <version.capricorn-seaweedfs>0.9.0_beta</version.capricorn-seaweedfs>
-        <!--        <version.validator>7.0.1.Final</version.validator>-->
+        <version.spring-boot>3.1.1</version.spring-boot>
+        <version.snakeyaml>2.0</version.snakeyaml>
+        <version.jackson-datetype-310>2.15.2</version.jackson-datetype-310>
+        <version.capricorn-base>1.2.1</version.capricorn-base>
+        <version.capricorn-sdk>1.2.1</version.capricorn-sdk>
+        <version.capricorn-seaweedfs>1.0.0_beta</version.capricorn-seaweedfs>
+        <version.capricorn-sdk-new>1.0.0_beta</version.capricorn-sdk-new>
         <version.servlet>6.0.0</version.servlet>
         <version.mysql-driver>8.0.33</version.mysql-driver>
         <version.junit>5.9.3</version.junit>
         <version.disruptor>3.4.4</version.disruptor>
-        <version.castle>1.70</version.castle>
+        <!--        <version.castle>1.70</version.castle>-->
         <version.zxing>3.5.1</version.zxing>
         <version.mybatis-plus>3.5.3.1</version.mybatis-plus>
         <version.bcpkix-jdk15on>1.70</version.bcpkix-jdk15on>
-        <version.spring-cloud-stream>4.0.3</version.spring-cloud-stream>
         <version.mockwebserver>4.11.0</version.mockwebserver>
+        <version.javacv>1.5.9</version.javacv>
+        <version.pdfbox>2.0.29</version.pdfbox>
+        <version.spring-mock>2.0.8</version.spring-mock>
 
         <version.maven-complier>3.11.0</version.maven-complier>
         <version.maven-springboot>3.0.6</version.maven-springboot>
     </properties>
 
     <repositories>
+        <!--        <repository>-->
+        <!--            <id>central</id>-->
+        <!--            <name>中央仓库</name>-->
+        <!--            <url>https://repo.maven.apache.org/maven2</url>-->
+        <!--            <layout>default</layout>-->
+        <!--            <snapshots>-->
+        <!--                <enabled>false</enabled>-->
+        <!--            </snapshots>-->
+        <!--        </repository>-->
         <repository>
-            <id>central</id>
-            <name>中央仓库</name>
-            <url>https://repo.maven.apache.org/maven2</url>
-            <layout>default</layout>
+            <id>central-aliyun</id>
+            <name>阿里云镜像</name>
+            <url>https://maven.aliyun.com/repository/central</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -61,7 +75,16 @@
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-starter-tomcat</artifactId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>org.yaml</groupId>
+                        <artifactId>snakeyaml</artifactId>
+                    </exclusion>
                 </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${version.snakeyaml}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -154,11 +177,18 @@
                 <version>${version.zxing}</version>
             </dependency>
 
-            <!--Kafka-->
+            <!--JavaCV-->
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-stream-binder-kafka-reactive</artifactId>
-                <version>${version.spring-cloud-stream}</version>
+                <groupId>org.bytedeco</groupId>
+                <artifactId>javacv-platform</artifactId>
+                <version>${version.javacv}</version>
+            </dependency>
+
+            <!--pdfbox-->
+            <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>pdfbox</artifactId>
+                <version>${version.pdfbox}</version>
             </dependency>
 
             <!--Embedded Server-->
@@ -199,12 +229,24 @@
                 <artifactId>pb-capricorn-seaweedfs-spring-boot-starter</artifactId>
                 <version>${version.capricorn-seaweedfs}</version>
             </dependency>
+            <dependency>
+                <groupId>xyz.proteanbear</groupId>
+                <artifactId>pb-capricorn-spring-boot-starter</artifactId>
+                <version>${version.capricorn-sdk-new}</version>
+            </dependency>
 
             <!--JUnit-->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
                 <version>${version.junit}</version>
+            </dependency>
+            <!--SpringMock-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-mock</artifactId>
+                <version>${version.spring-mock}</version>
+                <scope>test</scope>
             </dependency>
             <!--MockServer-->
             <dependency>
