@@ -242,6 +242,11 @@
                 <artifactId>pb-capricorn-spring-boot-starter</artifactId>
                 <version>${version.capricorn-sdk-new}</version>
             </dependency>
+            <dependency>
+                <groupId>xyz.proteanbear</groupId>
+                <artifactId>pb-capricorn-spring-boot-archives-starter</artifactId>
+                <version>${version.capricorn-sdk-new}</version>
+            </dependency>
 
             <!--JUnit-->
             <dependency>
