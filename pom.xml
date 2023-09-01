@@ -35,6 +35,7 @@
         <version.javacv>1.5.9</version.javacv>
         <version.pdfbox>2.0.29</version.pdfbox>
         <version.spring-mock>2.0.8</version.spring-mock>
+        <version.lombok>1.18.28</version.lombok>
 
         <version.maven-complier>3.11.0</version.maven-complier>
         <version.maven-springboot>3.0.6</version.maven-springboot>
@@ -189,6 +190,13 @@
                 <groupId>org.apache.pdfbox</groupId>
                 <artifactId>pdfbox</artifactId>
                 <version>${version.pdfbox}</version>
+            </dependency>
+
+            <!--Lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${version.lombok}</version>
             </dependency>
 
             <!--Embedded Server-->
