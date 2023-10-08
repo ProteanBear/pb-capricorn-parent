@@ -34,6 +34,7 @@
         <version.mockwebserver>4.11.0</version.mockwebserver>
         <version.javacv>1.5.9</version.javacv>
         <version.pdfbox>2.0.29</version.pdfbox>
+        <version.redisson>3.23.5</version.redisson>
         <version.spring-mock>2.0.8</version.spring-mock>
         <version.lombok>1.18.28</version.lombok>
 
@@ -195,6 +196,13 @@
                 <groupId>org.apache.pdfbox</groupId>
                 <artifactId>pdfbox</artifactId>
                 <version>${version.pdfbox}</version>
+            </dependency>
+
+            <!-- Redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${version.redisson}</version>
             </dependency>
 
             <!--Embedded Server-->
