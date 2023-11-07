@@ -6,7 +6,7 @@
 
     <groupId>xyz.proteanbear</groupId>
     <artifactId>pb-capricorn-parent</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.3</version>
     <packaging>pom</packaging>
     <description>Capricorn综合应用技术服务平台：父级项目，用于控制全部依赖版本模块。</description>
 
@@ -16,27 +16,27 @@
         <maven.compiler.cur-target>17</maven.compiler.cur-target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <version.spring-boot>3.1.4</version.spring-boot>
-        <version.snakeyaml>2.0</version.snakeyaml>
-        <version.jackson-datetype-310>2.15.2</version.jackson-datetype-310>
-        <version.capricorn-base>1.2.2</version.capricorn-base>
+        <version.spring-boot>3.1.5</version.spring-boot>
+        <version.snakeyaml>2.2</version.snakeyaml>
+        <version.jackson-datatype-310>2.15.3</version.jackson-datatype-310>
+        <version.capricorn-base>1.2.3</version.capricorn-base>
         <version.capricorn-sdk>1.2.2</version.capricorn-sdk>
         <version.capricorn-seaweedfs>1.0.0_beta</version.capricorn-seaweedfs>
-        <version.capricorn-sdk-new>1.0.0_beta</version.capricorn-sdk-new>
+        <version.capricorn-sdk-new>1.1.0_beta</version.capricorn-sdk-new>
         <version.servlet>6.0.0</version.servlet>
         <version.mysql-driver>8.0.33</version.mysql-driver>
-        <version.junit>5.9.3</version.junit>
-        <version.disruptor>3.4.4</version.disruptor>
+        <version.junit>5.10.1</version.junit>
+        <version.disruptor>4.0.0</version.disruptor>
         <!--        <version.castle>1.70</version.castle>-->
-        <version.zxing>3.5.1</version.zxing>
-        <version.mybatis-plus>3.5.3.1</version.mybatis-plus>
+        <version.zxing>3.5.2</version.zxing>
+        <version.mybatis-plus>3.5.4.1</version.mybatis-plus>
         <version.bcpkix-jdk15on>1.70</version.bcpkix-jdk15on>
-        <version.mockwebserver>4.11.0</version.mockwebserver>
+        <version.mockwebserver>4.12.0</version.mockwebserver>
         <version.javacv>1.5.9</version.javacv>
-        <version.pdfbox>2.0.29</version.pdfbox>
-        <version.redisson>3.23.5</version.redisson>
+        <version.pdfbox>3.0.0</version.pdfbox>
+        <version.redisson>3.24.3</version.redisson>
         <version.spring-mock>2.0.8</version.spring-mock>
-        <version.lombok>1.18.28</version.lombok>
+        <version.lombok>1.18.30</version.lombok>
 
         <version.maven-complier>3.11.0</version.maven-complier>
         <version.maven-springboot>3.0.6</version.maven-springboot>
@@ -155,7 +155,7 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.datatype</groupId>
                 <artifactId>jackson-datatype-jsr310</artifactId>
-                <version>${version.jackson-datetype-310}</version>
+                <version>${version.jackson-datatype-310}</version>
             </dependency>
 
             <!--Message Queue-->
@@ -314,7 +314,7 @@
                                 <includeTypes>jar</includeTypes>
                                 <includeScope>runtime</includeScope>
                                 <outputDirectory>${project.build.directory}/libs</outputDirectory>
-                                <excludeGroupIds>${project.groupId}</excludeGroupIds>
+                                <excludeGroupIds>${project.groupId},xyz.proteanbear</excludeGroupIds>
                             </configuration>
                         </execution>
                     </executions>
@@ -329,6 +329,38 @@
                             <include>
                                 <groupId>${project.groupId}</groupId>
                                 <artifactId>${project.artifactId}</artifactId>
+                            </include>
+                            <include>
+                                <groupId>xyz.proteanbear</groupId>
+                                <artifactId>pb-capricorn-base</artifactId>
+                            </include>
+                            <include>
+                                <groupId>xyz.proteanbear</groupId>
+                                <artifactId>pb-capricorn-spring-boot-sdk</artifactId>
+                            </include>
+                            <include>
+                                <groupId>xyz.proteanbear</groupId>
+                                <artifactId>pb-capricorn-spring-boot-autoconfigure</artifactId>
+                            </include>
+                            <include>
+                                <groupId>xyz.proteanbear</groupId>
+                                <artifactId>pb-capricorn-spring-boot-starter</artifactId>
+                            </include>
+                            <include>
+                                <groupId>xyz.proteanbear</groupId>
+                                <artifactId>pb-capricorn-spring-boot-archives-starter</artifactId>
+                            </include>
+                            <include>
+                                <groupId>xyz.proteanbear</groupId>
+                                <artifactId>pb-capricorn-seaweedfs-template</artifactId>
+                            </include>
+                            <include>
+                                <groupId>xyz.proteanbear</groupId>
+                                <artifactId>pb-capricorn-seaweedfs-spring-boot-autoconfigure</artifactId>
+                            </include>
+                            <include>
+                                <groupId>xyz.proteanbear</groupId>
+                                <artifactId>pb-capricorn-seaweedfs-spring-boot-starter</artifactId>
                             </include>
                         </includes>
                     </configuration>
