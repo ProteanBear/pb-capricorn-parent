@@ -33,7 +33,7 @@
         <version.bcpkix-jdk15on>1.70</version.bcpkix-jdk15on>
         <version.mockwebserver>4.12.0</version.mockwebserver>
         <version.javacv>1.5.9</version.javacv>
-        <version.pdfbox>3.0.0</version.pdfbox>
+        <version.pdfbox>2.0.30</version.pdfbox>
         <version.redisson>3.24.3</version.redisson>
         <version.spring-mock>2.0.8</version.spring-mock>
         <version.lombok>1.18.30</version.lombok>
