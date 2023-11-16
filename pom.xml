@@ -43,15 +43,6 @@
     </properties>
 
     <repositories>
-        <!--        <repository>-->
-        <!--            <id>central</id>-->
-        <!--            <name>中央仓库</name>-->
-        <!--            <url>https://repo.maven.apache.org/maven2</url>-->
-        <!--            <layout>default</layout>-->
-        <!--            <snapshots>-->
-        <!--                <enabled>false</enabled>-->
-        <!--            </snapshots>-->
-        <!--        </repository>-->
         <repository>
             <id>central-aliyun</id>
             <name>阿里云镜像</name>
@@ -63,6 +54,15 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+<!--        <repository>-->
+<!--            <id>central</id>-->
+<!--            <name>中央仓库</name>-->
+<!--            <url>https://repo.maven.apache.org/maven2</url>-->
+<!--            <layout>default</layout>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
     </repositories>
 
     <dependencyManagement>
