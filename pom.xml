@@ -54,15 +54,15 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-<!--        <repository>-->
-<!--            <id>central</id>-->
-<!--            <name>中央仓库</name>-->
-<!--            <url>https://repo.maven.apache.org/maven2</url>-->
-<!--            <layout>default</layout>-->
-<!--            <snapshots>-->
-<!--                <enabled>false</enabled>-->
-<!--            </snapshots>-->
-<!--        </repository>-->
+        <!--        <repository>-->
+        <!--            <id>central</id>-->
+        <!--            <name>中央仓库</name>-->
+        <!--            <url>https://repo.maven.apache.org/maven2</url>-->
+        <!--            <layout>default</layout>-->
+        <!--            <snapshots>-->
+        <!--                <enabled>false</enabled>-->
+        <!--            </snapshots>-->
+        <!--        </repository>-->
     </repositories>
 
     <dependencyManagement>
@@ -127,6 +127,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${version.spring-boot}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
                 <version>${version.spring-boot}</version>
             </dependency>
 
