@@ -297,10 +297,14 @@
                     <configuration>
                         <source>${maven.compiler.cur-source}</source>
                         <target>${maven.compiler.cur-target}</target>
+                        <parameters>true</parameters>
                         <encoding>UTF-8</encoding>
                         <compilerArguments>
                             <extdirs>libs</extdirs>
                         </compilerArguments>
+                        <compilerArgs>
+                            <arg>-parameters</arg>
+                        </compilerArgs>
                     </configuration>
                 </plugin>
                 <plugin>
