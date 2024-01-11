@@ -299,10 +299,8 @@
                         <target>${maven.compiler.cur-target}</target>
                         <parameters>true</parameters>
                         <encoding>UTF-8</encoding>
-                        <compilerArguments>
-                            <extdirs>libs</extdirs>
-                        </compilerArguments>
                         <compilerArgs>
+                            <extdirs>libs</extdirs>
                             <arg>-parameters</arg>
                         </compilerArgs>
                     </configuration>
