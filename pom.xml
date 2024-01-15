@@ -300,7 +300,6 @@
                         <parameters>true</parameters>
                         <encoding>UTF-8</encoding>
                         <compilerArgs>
-                            <extdirs>libs</extdirs>
                             <arg>-parameters</arg>
                         </compilerArgs>
                     </configuration>
