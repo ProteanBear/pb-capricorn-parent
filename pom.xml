@@ -6,7 +6,7 @@
 
     <groupId>xyz.proteanbear</groupId>
     <artifactId>pb-capricorn-parent</artifactId>
-    <version>1.2.4</version>
+    <version>1.2.5</version>
     <packaging>pom</packaging>
     <description>Capricorn综合应用技术服务平台：父级项目，用于控制全部依赖版本模块。</description>
 
@@ -16,24 +16,24 @@
         <maven.compiler.cur-target>21</maven.compiler.cur-target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <version.spring-boot>3.2.1</version.spring-boot>
+        <version.spring-boot>3.2.3</version.spring-boot>
         <version.snakeyaml>2.2</version.snakeyaml>
         <version.jackson-datatype-310>2.16.1</version.jackson-datatype-310>
-        <version.capricorn-base>1.2.4</version.capricorn-base>
+        <version.capricorn-base>1.2.5</version.capricorn-base>
         <version.capricorn-sdk>1.2.3</version.capricorn-sdk>
         <version.capricorn-seaweedfs>1.0.1</version.capricorn-seaweedfs>
-        <version.capricorn-sdk-new>1.1.1</version.capricorn-sdk-new>
+        <version.capricorn-sdk-new>1.1.2</version.capricorn-sdk-new>
         <version.servlet>6.0.0</version.servlet>
         <version.mysql-driver>8.0.33</version.mysql-driver>
-        <version.junit>5.10.1</version.junit>
+        <version.junit>5.10.2</version.junit>
         <version.disruptor>4.0.0</version.disruptor>
-        <version.zxing>3.5.2</version.zxing>
+        <version.zxing>3.5.3</version.zxing>
         <version.mybatis-plus>3.5.5</version.mybatis-plus>
         <version.bcpkix-jdk>1.77</version.bcpkix-jdk>
         <version.mockwebserver>4.12.0</version.mockwebserver>
-        <version.javacv>1.5.9</version.javacv>
+        <version.javacv>1.5.10</version.javacv>
         <version.pdfbox>3.0.1</version.pdfbox>
-        <version.redisson>3.25.2</version.redisson>
+        <version.redisson>3.27.1</version.redisson>
         <version.spring-mock>2.0.8</version.spring-mock>
         <version.lombok>1.18.30</version.lombok>
 
