@@ -28,7 +28,7 @@
         <version.junit>5.10.2</version.junit>
         <version.disruptor>4.0.0</version.disruptor>
         <version.zxing>3.5.3</version.zxing>
-        <version.mybatis-plus>3.5.6</version.mybatis-plus>
+        <version.mybatis-plus>3.5.5</version.mybatis-plus>
         <version.bcpkix-jdk>1.78</version.bcpkix-jdk>
         <version.mockwebserver>4.12.0</version.mockwebserver>
         <version.javacv>1.5.10</version.javacv>
