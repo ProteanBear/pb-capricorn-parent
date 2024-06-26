@@ -21,7 +21,7 @@
         <version.jackson-datatype-310>2.17.1</version.jackson-datatype-310>
         <version.capricorn-base>1.3.0</version.capricorn-base>
         <version.capricorn-sdk>1.2.3</version.capricorn-sdk>
-        <version.capricorn-seaweedfs>1.0.3</version.capricorn-seaweedfs>
+        <version.capricorn-seaweedfs>1.0.4</version.capricorn-seaweedfs>
         <version.capricorn-sdk-new>1.3.0</version.capricorn-sdk-new>
         <version.servlet>6.1.0</version.servlet>
         <version.mysql-driver>8.0.33</version.mysql-driver>
@@ -302,7 +302,6 @@
                     <configuration>
                         <source>${maven.compiler.cur-source}</source>
                         <target>${maven.compiler.cur-target}</target>
-                        <compilerVersion>${maven.compiler.cur-source}</compilerVersion>
                         <parameters>true</parameters>
                         <encoding>UTF-8</encoding>
                         <compilerArgs>
