@@ -11,6 +11,10 @@
     <description>Capricorn综合应用技术服务平台：父级项目，用于控制全部依赖版本模块。</description>
 
     <properties>
+        <developer_url>https://gitee.com</developer_url>
+        <developer_name>ProteanBear</developer_name>
+        <developer_email>moru_1982@hotmail.com</developer_email>
+
         <java.version>21</java.version>
         <maven.compiler.cur-source>21</maven.compiler.cur-source>
         <maven.compiler.cur-target>21</maven.compiler.cur-target>
@@ -39,7 +43,44 @@
 
         <version.maven-complier>3.13.0</version.maven-complier>
         <version.maven-springboot>3.3.3</version.maven-springboot>
+
+        <version.sonatype>1.7.0</version.sonatype>
+        <version.maven-release>3.1.1</version.maven-release>
+        <version.maven-gpg>3.2.5</version.maven-gpg>
+        <version.maven-source>3.3.1</version.maven-source>
+        <version.maven-javadoc>3.10.0</version.maven-javadoc>
     </properties>
+
+    <!-- For Maven -->
+    <name>${project.groupId}:${project.artifactId}</name>
+    <url>${developer_url}/${developer_name}/${project.artifactId}</url>
+
+    <!-- License -->
+    <licenses>
+        <license>
+            <name>GNU LESSER GENERAL PUBLIC LICENSE, Version 3</name>
+            <url>https://www.gnu.org/licenses/lgpl-3.0.txt</url>
+        </license>
+    </licenses>
+
+    <!-- Developer -->
+    <developers>
+        <developer>
+            <name>${developer_name}</name>
+            <email>${developer_email}</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <!-- SCM -->
+    <scm>
+        <connection>scm:git:${developer_url}/${developer_name}/${project.artifactId}.git</connection>
+        <developerConnection>scm:git:${developer_url}/${developer_name}/${project.artifactId}.git</developerConnection>
+        <url>${developer_url}/${developer_name}/${project.artifactId}</url>
+    </scm>
 
     <repositories>
         <repository>
@@ -63,6 +104,19 @@
         <!--            </snapshots>-->
         <!--        </repository>-->
     </repositories>
+
+    <!-- Distribution -->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <name>Maven Central Staging Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
     <dependencyManagement>
         <dependencies>
@@ -391,5 +445,87 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <!-- sonatype -->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>${version.sonatype}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <!-- release -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${version.maven-release}</version>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <releaseProfiles>release</releaseProfiles>
+                    <goals>deploy</goals>
+                </configuration>
+            </plugin>
+            <!-- compiler -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${version.maven-complier}</version>
+                <configuration>
+                    <source>${maven.compiler.cur-source}</source>
+                    <target>${maven.compiler.cur-target}</target>
+                </configuration>
+            </plugin>
+            <!-- sign -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>${version.maven-gpg}</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <keyname>${gpg.keyname}</keyname>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- source -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${version.maven-source}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- javadoc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${version.maven-javadoc}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>
